@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Period</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <header>
+                <div class="spanish">
+                    <i class="fa-solid fa-a"><img src="spain.jpg"></i>
+                    <div class="spanish-text"><a href="index.html">Spanish Period</a></div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="riddle.html">Riddle</a></li>
+                        <li><a href="poem.html">Poem</a></li>
+                        <li><a href="legend.html">Legend</a></li>
+                        <li><a href="shortstory.html">Short Story</a></li>
+                        <li><a href="myth.html">Myth</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="picture">
+                    <img src="colonization.jpg">
+                </div>
+                <div class="text">
+                    <h1>Philippine Literature during Spanish Period</h1><br>
+                    <p>The focus of literature changed upon the arrival of Spaniards. Emphasis on morality and religion was common in literary forms such as <i>Corrido, Pasyon</i>, and <i>Cenaculo</i>. The production of printed materials started but was mostly of religious purposes and themes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+
+        })
+    </script>
+
+</body>
+</html>

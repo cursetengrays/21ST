@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Period</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff0b54; /* Blue */
+        }
+
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-riddle {
+            color: #e74c3c; /* Red */
+        }
+
+        .nav-short-story {
+            color: #3498db; /* Blue */
+        }
+
+        .nav-poem {
+            color: #2ecc71; /* Green */
+        }
+
+        .nav-legend {
+            color: #f39c12; /* Orange */
+        }
+
+        .nav-myth {
+            color: #9b59b6; /* Purple */
+        }
+
+        .item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        h2 {
+            cursor: pointer;
+        }
+
+        .riddle {
+            color: #9b59b6; /* Red */
+        }
+
+        .short-story {
+            color: #f39c12; /* Blue */
+        }
+
+        .poem {
+            color: #3498db; /* Green */
+        }
+
+        .legend {
+            color: #2ecc71; /* Orange */
+        }
+
+        .myth {
+            color: #e74c3c; /* Purple */
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .dropdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+img.home { width: 50px;
+           height: 50px;
+           margin-left: 1250px;
+           margin-top: 50px; }
+
+a.home { text-decoration: none; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>American Period</h1>
+
+        <nav>
+            <a class="nav-riddle" href="#riddle">Riddle</a>
+            <a class="nav-short-story" href="#short-story">Short Story</a>
+            <a class="nav-poem" href="#poem">Poem</a>
+            <a class="nav-legend" href="#legend">Legend</a>
+            <a class="nav-myth" href="#myth">Myth</a>
+        </nav>
+
+        <div class="item" id="riddle">
+            <h2 class="riddle" onclick="toggleDropdown('dropdown-riddle')">Riddle</h2>
+            <div class="dropdown-content" id="dropdown-riddle">
+                <p>What has keys but can't open locks?</p>
+                <p><strong>Answer:</strong> A piano.</p>
+                <img src="piano.jpg" alt="A piano">
+            </div>
+        </div>
+
+        <div class="item" id="short-story">
+            <h2 class="short-story" onclick="toggleDropdown('dropdown-short-story')">Short Story</h2>
+            <div class="dropdown-content" id="dropdown-short-story">
+                <p>Once upon a time in a small town, a young girl named Sarah discovered a hidden talent for painting. She spent her days creating beautiful landscapes and portraits, which brought joy to her community. One day, her work was noticed by a traveling artist who encouraged her to pursue her dreams. With his guidance, Sarah became a renowned artist, inspiring others to follow their passions.</p>
+                <img src="painting.jpg" alt="A beautiful painting">
+            </div>
+        </div>
+
+        <div class="item" id="poem">
+            <h2 class="poem" onclick="toggleDropdown('dropdown-poem')">Poem</h2>
+            <div class="dropdown-content" id="dropdown-poem">
+                <p>In the heart of the forest, where the wildflowers bloom,<br>
+                A whisper of magic fills the air with perfume.<br>
+                The sun dances lightly on leaves of bright green,<br>
+                Nature's own canvas, a beautiful scene.</p>
+                <img src="forest.jpg" alt="A forest scene">
+            </div>
+        </div>
+
+        <div class="item" id="legend">
+            <h2 class="legend" onclick="toggleDropdown('dropdown-legend')">Legend</h2>
+            <div class="dropdown-content" id="dropdown-legend">
+                <p>The Legend of Sleepy Hollow tells the tale of Ichabod Crane, a schoolteacher who encounters the ghostly Headless Horseman. Set in a small village near the Tarry Town, Ichabod's fear of the supernatural leads to a fateful night when he must confront the legend that haunts the area.</p>
+                <img src="sleepyhollow.jpg" alt="Sleepy Hollow">
+            </div>
+        </div>
+
+        <div class="item" id="myth">
+            <h2 class="myth" onclick="toggleDropdown('dropdown-myth')">Myth</h2>
+            <div class="dropdown-content" id="dropdown-myth">
+                <p>The myth of Paul Bunyan, a giant lumberjack, and his blue ox, Babe, is a classic American tale. It is said that Paul was so large that he could fell entire forests with a single swing of his axe. His adventures and feats of strength are celebrated in folklore, symbolizing the spirit of the American frontier.</p>
+                <img src="amyth.jpg" alt="Paul Bunyan and Babe">
+            </div>
+        </div>
+    </div>
+
+<a href="21st.html"> <img class="home" src="home.png"> </a>
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('h2')) {
+                const dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
